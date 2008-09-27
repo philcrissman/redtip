@@ -1,0 +1,78 @@
+#RT_overlay {
+  position: fixed;
+  z-index:100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height:100%;
+  background: transparent url(../images/nothing.gif) repeat-x repeat-y;
+  opacity: 0.01;
+  filter: alpha(opacity=0.01);
+
+}
+
+#RT_redtip {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  z-index:101;
+}
+
+#RT_window {
+	position: absolute;
+	left: 0;
+  /*width: 100%;
+    height: 100%*/;
+	z-index: 101;
+	line-height: 1.3em;
+}
+
+#RT_loading {
+  margin: 0 auto 0 auto;
+	width: 250px;
+	height: 250px;
+  text-align: center;
+  background: #FFF url(../images/loading.gif) no-repeat center center;
+}
+
+.RT_close {
+  /*position: absolute;*/
+  float: right;
+  margin: 0px;padding: 0px; line-height:0;height:22px;
+}
+
+.RT_close a {
+  margin: 0px;padding: 0px;
+  text-decoration: none;
+}
+
+.redtip_contents {
+  margin: 0 auto;
+  background: #fff url(/images/tab-active.png) top left repeat-x;
+  text-align: left;
+  width: 400px;
+  padding: 10px;
+  border: 1px solid #444;
+  border-width: 4px 4px 4px 4px;
+  -moz-border-radius: 8px;
+  position: absolute;
+}
+
+.redtip_dropdown {
+  margin: 0 auto;
+  background: #fff;
+  text-align: left;
+  padding: 0px;
+  border: 1px solid #444;
+  border-width: 1px 2px 2px 1px;
+  position: absolute;
+  z-index:1001;
+}
+
+.redtip_dropdown ul { margin-left: 0px; list-style-type: none; }
+.redtip_dropdown ul li { }
+.redtip_dropdown ul li a { display:block; padding: 2px 5px; text-decoration: none; cursor:pointer; cursor:hand; }
+.redtip_dropdown ul li a:hover { background: #ddd; }

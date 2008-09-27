@@ -1,0 +1,80 @@
+Redtip
+======
+
+Redtip is a simple javascript based tooltip helper for rails. It is based heavily on the Redbox plugin, but modified for this purpose rather than with the centered window. The css for the tips can be adjusted to suit your taste, you'll find it in redtip.css.
+
+Credits
+=======
+
+This was based heavily (very heavily) on Redbox, which in turn credits:
+
+Much of the design, and some of the javascript and css are shamelessly ripped from the Thickbox library, by Cody Lindley. 
+
+This library should be considered to be a derivative work of Thickbox, and is also released under the MIT licence.
+
+http://jquery.com/demo/thickbox/
+
+Redbox Rails plugin development by Craig Ambrose
+
+http://www.craigambrose.com
+
+Additional code submissions, testing and bugfixes by:
+- Brandon Keepers
+- Niko Dittmann
+- Randy Parker
+- Julien Coupard
+- Erin Staniland
+(and many more)
+
+The changes to make Redbox into Redtip were done by Phil Crissman
+
+http://philcrissman.com
+
+Licence
+=======
+
+MIT License
+
+http://www.opensource.org/licenses/mit-license.php
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so.
+
+
+Usage
+=====
+
+Examine the public methods of redtip_helper.rb. They will all look familiar, much like the existing link helpers, except that they work with redtips. You should not need to interact with the javascript directly.
+
+Redtip provides one helper which is used instead of a regular “link_to” helper when linking to a redtip.
+
+link_to_redtip(name, id, html_options = {})
+
+This is used if you already have an HTML element in your page (presumably hidden, but it doesn’t have to be) and you wish to use it for your redbox. Specify it by it’s id, and you’re in business. 
+
+By default, the tip will appear below and left-aligned with the link that calls it. If you want to, you can offset this manually by calling it like this (for example):
+
+link_to_redtip(name, id, :offsetLeft => -240, :offsetTop => 50)
+
+The tip is 400px wide by default; you can change this in the css, but if you do, you may need to take a look at the clonePositionForTip method in redtip.js, as it uses the value of 400px (or so) to determine if the tip is going to spill outside the window, and automatically offsets it to the left if it is.
+
+
+
+
+
+More Info
+=========
+
+A static page is maintained for this plugin at: 
+
+Updates are always posted at:
+
+
+	
+Bugs, once you have tracked down the exact problem and can reproduce a failure case, can be reported to:
+
+
+
+If you find this plugin useful, you can give something back to the community by examining your own code and seeing
+what bits of functionality are generic enough to be useful as a rails plugin. Releasing rails plugins is dead
+simple, and helps us all do better work.
+
